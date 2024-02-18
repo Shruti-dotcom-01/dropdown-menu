@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.menu-bar{
+    background: rgb(48, 84, 48);
+    text-align: center;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+}
+   
+.menu-bar ul{
+    display: flex;
+    color: #fff;
+    list-style: none;
+}
+
+.menu-bar ul li{
+    width: 120px;
+    margin: 15px;
+}
+
+.menu-bar ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.active, .menu-bar ul li:hover{
+    background-color: rgb(87, 122, 87);
+    border-radius: 5px;
+
+}
+
+.menu-bar .fa{
+    margin-right: 8px;
+}
+
+.sub-menu-1{
+  display: none;
+
+}
+
+.menu-bar ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background: rgb(48, 84, 48);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 5px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+    color: #b6d773;
+}
+
+.fa-angle-right{
+   float: right;
+}
+
+.sub-menu-2{
+  display: none;
+}
+
+.hover-me:hover .sub-menu-2{
+    display: block;
+    position: absolute;
+    background: rgb(48, 84, 48);
+    margin-top: -40px;
+    margin-left: 140px;
+}
+.background-img{
+    height: 650px;
+    background-image: url(assets/bg.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#me-nu{
+    display: none;
+}
+
+header label{
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width:991px){
+    .menu-bar{
+        padding: 20px;
+    }
+
+    header label{
+        display: initial;
+    }
+
+    header .navbar{
+       display: none;
+       position: absolute;
+       top: 100%;
+       left: 0;
+       right: 0;
+       background: #fff;
+       border-top: 1px solid rgba(0,0,0,.1);
+    }
+
+    header .navbar ul li{
+        width: 100%;
+    }
+
+    header .navbar ul li{
+        position: relative;
+        width: 100%;
+    }
+    header .navbar ul li ul li{
+        background: #eee;
+    }
+
+    #me-nu:checked ~ .navbar{
+        display: initial;
+    }
+}
